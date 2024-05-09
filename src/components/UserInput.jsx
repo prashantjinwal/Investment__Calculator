@@ -1,14 +1,20 @@
 
-function UserInput() {
+
+
+function UserInput({ onChangeComp, userInput }) {
+
+
   return (
     <section id="user-input" >
-     <div  className="input-group">
+     <div className="input-group">
         {/* Initial Investment */}
         <p>
             <label>Initial Investment</label>
             <input 
             type="number"
             required
+            value={userInput.initialInvestment}
+            onChange={(event) => onChangeComp('initialInvestment', event.target.value)}
 
              />
         </p>
@@ -18,6 +24,8 @@ function UserInput() {
             <input 
             type="number"
             required
+            value={userInput.annualInvestment}
+            onChange={(event) => onChangeComp('annualInvestment', event.target.value)}
              />
         </p>
         
@@ -27,6 +35,8 @@ function UserInput() {
             <input 
             type="number"
             required
+            value={userInput.expectedReturn}
+            onChange={(event) => onChangeComp('expectedReturn', event.target.value)}
              />
         </p>
         
@@ -36,6 +46,8 @@ function UserInput() {
             <input 
             type="number"
             required
+            value={userInput.duration}
+            onChange={(event) => onChangeComp('duration', event.target.value)}
              />
         </p>
         
