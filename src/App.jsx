@@ -15,7 +15,7 @@ function App() {
     setuserInputs(prev=>{
       return{
         ...prev,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue,
       };
     })
 
